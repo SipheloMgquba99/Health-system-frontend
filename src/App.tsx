@@ -1,17 +1,19 @@
-import './App.css'
-import Header from './components/Header'
-import Sidebar from './components/Sidebar'
-import Home from './components/Home'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Login from './components/Login'
+import Register from './components/Register'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 
   return (
-  <div className='grid-container'>
-<Header/>
-  <Sidebar/>
-  <Home/>
-  </div> 
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login />}></Route>
+        <Route path='/' element={<Register />}></Route>
+      </Routes>
+
+    </BrowserRouter>
   )
 }
-
 export default App
